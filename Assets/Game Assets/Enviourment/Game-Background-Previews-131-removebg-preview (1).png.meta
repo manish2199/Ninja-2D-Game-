@@ -1,0 +1,1052 @@
+fileFormatVersion: 2
+guid: b3e4b78723758ff47985449cda69e841
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2169454461278314722
+    second: Game-Background-Previews-131-removebg-preview (1)_0
+  - first:
+      213: 1486693593353109389
+    second: Game-Background-Previews-131-removebg-preview (1)_1
+  - first:
+      213: -2974679366403287105
+    second: Game-Background-Previews-131-removebg-preview (1)_2
+  - first:
+      213: 440276669985073142
+    second: Game-Background-Previews-131-removebg-preview (1)_3
+  - first:
+      213: 1759064870224372786
+    second: Game-Background-Previews-131-removebg-preview (1)_4
+  - first:
+      213: 553407253042350931
+    second: Game-Background-Previews-131-removebg-preview (1)_5
+  - first:
+      213: 8482832008571558711
+    second: Game-Background-Previews-131-removebg-preview (1)_6
+  - first:
+      213: -5955418536821884323
+    second: Game-Background-Previews-131-removebg-preview (1)_7
+  - first:
+      213: 5922113260567619578
+    second: Game-Background-Previews-131-removebg-preview (1)_8
+  - first:
+      213: 309362115425561216
+    second: Game-Background-Previews-131-removebg-preview (1)_9
+  - first:
+      213: -2619572608854754422
+    second: Game-Background-Previews-131-removebg-preview (1)_10
+  - first:
+      213: -791777065869780306
+    second: Game-Background-Previews-131-removebg-preview (1)_11
+  - first:
+      213: 7458910248292386616
+    second: Game-Background-Previews-131-removebg-preview (1)_12
+  - first:
+      213: -4585870904511324027
+    second: Game-Background-Previews-131-removebg-preview (1)_13
+  - first:
+      213: 2641588499679267348
+    second: Game-Background-Previews-131-removebg-preview (1)_14
+  - first:
+      213: 8579120349050404427
+    second: Game-Background-Previews-131-removebg-preview (1)_15
+  - first:
+      213: -7727523520283113734
+    second: Game-Background-Previews-131-removebg-preview (1)_16
+  - first:
+      213: -8865603246693986445
+    second: Game-Background-Previews-131-removebg-preview (1)_17
+  - first:
+      213: 3141996381209561756
+    second: Game-Background-Previews-131-removebg-preview (1)_18
+  - first:
+      213: 5018529306975202974
+    second: Game-Background-Previews-131-removebg-preview (1)_19
+  - first:
+      213: -30481041233045949
+    second: Game-Background-Previews-131-removebg-preview (1)_20
+  - first:
+      213: 2777575065513233479
+    second: Game-Background-Previews-131-removebg-preview (1)_21
+  - first:
+      213: -1572977464979679059
+    second: Game-Background-Previews-131-removebg-preview (1)_22
+  - first:
+      213: -2341718481906485202
+    second: Game-Background-Previews-131-removebg-preview (1)_23
+  - first:
+      213: 5979696090936938250
+    second: Game-Background-Previews-131-removebg-preview (1)_24
+  - first:
+      213: -7478299267096159074
+    second: Game-Background-Previews-131-removebg-preview (1)_25
+  - first:
+      213: -6911378173454182187
+    second: Game-Background-Previews-131-removebg-preview (1)_26
+  - first:
+      213: 6450152536538332567
+    second: Game-Background-Previews-131-removebg-preview (1)_27
+  - first:
+      213: 5448208447627732747
+    second: Game-Background-Previews-131-removebg-preview (1)_28
+  - first:
+      213: 5392678934057560501
+    second: Game-Background-Previews-131-removebg-preview (1)_29
+  - first:
+      213: -4928301002551627597
+    second: Game-Background-Previews-131-removebg-preview (1)_30
+  - first:
+      213: -8217852275663069019
+    second: Game-Background-Previews-131-removebg-preview (1)_31
+  - first:
+      213: -3293666240993221621
+    second: Game-Background-Previews-131-removebg-preview (1)_32
+  - first:
+      213: 5354325591560374024
+    second: Game-Background-Previews-131-removebg-preview (1)_33
+  - first:
+      213: -7317097455542342732
+    second: Game-Background-Previews-131-removebg-preview (1)_34
+  - first:
+      213: -1105781629889010452
+    second: Game-Background-Previews-131-removebg-preview (1)_35
+  - first:
+      213: 4397885419970300277
+    second: Game-Background-Previews-131-removebg-preview (1)_36
+  - first:
+      213: -7044011405696930310
+    second: Game-Background-Previews-131-removebg-preview (1)_37
+  - first:
+      213: 5569727703730089967
+    second: Game-Background-Previews-131-removebg-preview (1)_38
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Game-Background-Previews-131-removebg-preview (1)_0
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 410
+        width: 29
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1f9e1769ac84e1e0800000000000000
+      internalID: -2169454461278314722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game-Background-Previews-131-removebg-preview (1)_1
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 413
+        width: 42
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8f39a142fbc1a410800000000000000
+      internalID: 1486693593353109389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game-Background-Previews-131-removebg-preview (1)_2
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 410
+        width: 44
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb719d470e0d7b6d0800000000000000
+      internalID: -2974679366403287105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game-Background-Previews-131-removebg-preview (1)_3
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 338
+        width: 35
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f72a557c4d2c1600800000000000000
+      internalID: 440276669985073142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game-Background-Previews-131-removebg-preview (1)_4
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 338
+        width: 28
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 234a796fd24796810800000000000000
+      internalID: 1759064870224372786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game-Background-Previews-131-removebg-preview (1)_5
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 342
+        width: 42
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35bc6bde6f81ea700800000000000000
+      internalID: 553407253042350931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game-Background-Previews-131-removebg-preview (1)_6
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 346
+        width: 29
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73b983094c219b570800000000000000
+      internalID: 8482832008571558711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game-Background-Previews-131-removebg-preview (1)_7
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 347
+        width: 25
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5a74f7d46a1a5da0800000000000000
+      internalID: -5955418536821884323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game-Background-Previews-131-removebg-preview (1)_8
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 355
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af763cf32a29f2250800000000000000
+      internalID: 5922113260567619578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game-Background-Previews-131-removebg-preview (1)_9
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 354
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08a67e474331b4400800000000000000
+      internalID: 309362115425561216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game-Background-Previews-131-removebg-preview (1)_10
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 355
+        width: 27
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8b7ed1679865abd0800000000000000
+      internalID: -2619572608854754422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game-Background-Previews-131-removebg-preview (1)_11
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 354
+        width: 42
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaad78f14fa0305f0800000000000000
+      internalID: -791777065869780306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game-Background-Previews-131-removebg-preview (1)_12
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 247
+        width: 70
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8370df01a5f538760800000000000000
+      internalID: 7458910248292386616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game-Background-Previews-131-removebg-preview (1)_13
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 248
+        width: 70
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 580adc695b6bb50c0800000000000000
+      internalID: -4585870904511324027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game-Background-Previews-131-removebg-preview (1)_14
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 247
+        width: 70
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41ac326aebec8a420800000000000000
+      internalID: 2641588499679267348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game-Background-Previews-131-removebg-preview (1)_15
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 308
+        width: 25
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4e797ad0882f0770800000000000000
+      internalID: 8579120349050404427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game-Background-Previews-131-removebg-preview (1)_16
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 305
+        width: 29
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af68c0cec4252c490800000000000000
+      internalID: -7727523520283113734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game-Background-Previews-131-removebg-preview (1)_17
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 306
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37f4141b1dc07f480800000000000000
+      internalID: -8865603246693986445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game-Background-Previews-131-removebg-preview (1)_18
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 299
+        width: 25
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9a0f8bcf0d9a9b20800000000000000
+      internalID: 3141996381209561756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game-Background-Previews-131-removebg-preview (1)_19
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 310
+        width: 41
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9ee42db0d565a540800000000000000
+      internalID: 5018529306975202974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game-Background-Previews-131-removebg-preview (1)_20
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 268
+        width: 21
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3469bec87a5b39ff0800000000000000
+      internalID: -30481041233045949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game-Background-Previews-131-removebg-preview (1)_21
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 268
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74c06ec4ecdeb8620800000000000000
+      internalID: 2777575065513233479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game-Background-Previews-131-removebg-preview (1)_22
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 268
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da811306459ab2ae0800000000000000
+      internalID: -1572977464979679059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game-Background-Previews-131-removebg-preview (1)_23
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 268
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e283ff9927b808fd0800000000000000
+      internalID: -2341718481906485202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game-Background-Previews-131-removebg-preview (1)_24
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 237
+        width: 21
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0f8615b9e52cf250800000000000000
+      internalID: 5979696090936938250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game-Background-Previews-131-removebg-preview (1)_25
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 237
+        width: 18
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9c5ba4307eb73890800000000000000
+      internalID: -7478299267096159074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game-Background-Previews-131-removebg-preview (1)_26
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 238
+        width: 25
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d810e65b2ad510a0800000000000000
+      internalID: -6911378173454182187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game-Background-Previews-131-removebg-preview (1)_27
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 241
+        width: 17
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79db37fbe8b838950800000000000000
+      internalID: 6450152536538332567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game-Background-Previews-131-removebg-preview (1)_28
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 241
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b07222f97bceb9b40800000000000000
+      internalID: 5448208447627732747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game-Background-Previews-131-removebg-preview (1)_29
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 174
+        width: 70
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b9ab3c3be4a6da40800000000000000
+      internalID: 5392678934057560501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game-Background-Previews-131-removebg-preview (1)_30
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 102
+        width: 218
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b075b479582b9bb0800000000000000
+      internalID: -4928301002551627597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game-Background-Previews-131-removebg-preview (1)_31
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 174
+        width: 69
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a0a77435e254fd80800000000000000
+      internalID: -8217852275663069019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game-Background-Previews-131-removebg-preview (1)_32
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 102
+        width: 71
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0427e0210c8a42d0800000000000000
+      internalID: -3293666240993221621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game-Background-Previews-131-removebg-preview (1)_33
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 102
+        width: 70
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8074db0d1c26e4a40800000000000000
+      internalID: 5354325591560374024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game-Background-Previews-131-removebg-preview (1)_34
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 34
+        width: 71
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bbeb7fb1a2747a90800000000000000
+      internalID: -7317097455542342732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game-Background-Previews-131-removebg-preview (1)_35
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 34
+        width: 70
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce4205f577977a0f0800000000000000
+      internalID: -1105781629889010452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game-Background-Previews-131-removebg-preview (1)_36
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 34
+        width: 70
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 579033c0d7d680d30800000000000000
+      internalID: 4397885419970300277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game-Background-Previews-131-removebg-preview (1)_37
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 34
+        width: 70
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afd62a182f4ae3e90800000000000000
+      internalID: -7044011405696930310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game-Background-Previews-131-removebg-preview (1)_38
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 34
+        width: 70
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fefeb7c36d5ab4d40800000000000000
+      internalID: 5569727703730089967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

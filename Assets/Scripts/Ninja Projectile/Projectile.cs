@@ -8,6 +8,8 @@ public class Projectile : MonoBehaviour
 
    
     [SerializeField]float speed;
+    [SerializeField]float timer;
+
 
 //  public int damage ;
     
@@ -24,12 +26,14 @@ public class Projectile : MonoBehaviour
             rgb.velocity = new Vector2(-speed , 0 );
             transform.eulerAngles = new Vector3 ( 0 ,0 ,90);
             dir = 90; 
+            // print(isNinjaFacingLeft);
         }
         if (!isNinjaFacingLeft)
         {
             rgb.velocity = new Vector2(speed , 0 );
             transform.eulerAngles = new Vector3 ( 0 ,0 , -90);
              dir = -90;
+            // print(isNinjaFacingLeft);
         }
 
         // Destroy(gameObject , 5f);
@@ -37,17 +41,15 @@ public class Projectile : MonoBehaviour
 
     void OnCollisionEnter2D( Collision2D target)
     {
-        if (target.gameObject.CompareTag("BouncyPlatform"))
+        if (target.gameObject.CompareTag("ClimbingPlatform") || target.gameObject.CompareTag("Platform"))
         {
-            dir += -90;
-             
-            transform.eulerAngles = new Vector3 ( 0 ,0 , dir);
-        }
+            rgb.constraints = RigidbodyConstraints2D.FreezeAll;
+        } 
     }
 
    void OnEnable()
     {
-        Destroy(gameObject,5f);
+        Destroy(gameObject,timer);
     }
 
 

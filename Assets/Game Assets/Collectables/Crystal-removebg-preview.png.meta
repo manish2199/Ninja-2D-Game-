@@ -1,0 +1,836 @@
+fileFormatVersion: 2
+guid: 6ca8cf3288d0b124297cee9c33cb995e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7733360510072772186
+    second: Crystal-removebg-preview_0
+  - first:
+      213: 1931906459111529957
+    second: Crystal-removebg-preview_1
+  - first:
+      213: 4337382160848580257
+    second: Crystal-removebg-preview_2
+  - first:
+      213: 4321643946946232990
+    second: Crystal-removebg-preview_3
+  - first:
+      213: -3697028453462834362
+    second: Crystal-removebg-preview_4
+  - first:
+      213: 6793383628443921150
+    second: Crystal-removebg-preview_5
+  - first:
+      213: -1474625415044797859
+    second: Crystal-removebg-preview_6
+  - first:
+      213: 7246030695126390925
+    second: Crystal-removebg-preview_7
+  - first:
+      213: -8833266905813965221
+    second: Crystal-removebg-preview_8
+  - first:
+      213: 3271536181373197248
+    second: Crystal-removebg-preview_9
+  - first:
+      213: -8949232105812542353
+    second: Crystal-removebg-preview_10
+  - first:
+      213: -6486790196238594734
+    second: Crystal-removebg-preview_11
+  - first:
+      213: -1512555909566679800
+    second: Crystal-removebg-preview_12
+  - first:
+      213: 8094551190374649756
+    second: Crystal-removebg-preview_13
+  - first:
+      213: 3764793510170572366
+    second: Crystal-removebg-preview_14
+  - first:
+      213: 3492259911078105949
+    second: Crystal-removebg-preview_15
+  - first:
+      213: 8179407171068477452
+    second: Crystal-removebg-preview_16
+  - first:
+      213: 6914218806249963759
+    second: Crystal-removebg-preview_17
+  - first:
+      213: 8601803590931922727
+    second: Crystal-removebg-preview_18
+  - first:
+      213: -5620490637420016745
+    second: Crystal-removebg-preview_19
+  - first:
+      213: -5859740443490050611
+    second: Crystal-removebg-preview_20
+  - first:
+      213: 7992414794348617385
+    second: Crystal-removebg-preview_21
+  - first:
+      213: -7243947613390742738
+    second: Crystal-removebg-preview_22
+  - first:
+      213: 3061214672381152613
+    second: Crystal-removebg-preview_23
+  - first:
+      213: -3859286745241207889
+    second: Crystal-removebg-preview_24
+  - first:
+      213: -1451672796910425286
+    second: Crystal-removebg-preview_25
+  - first:
+      213: 2801465916169058428
+    second: Crystal-removebg-preview_26
+  - first:
+      213: 6181690165236284018
+    second: Crystal-removebg-preview_27
+  - first:
+      213: 444061602500099365
+    second: Crystal-removebg-preview_28
+  - first:
+      213: 5192445450368496356
+    second: Crystal-removebg-preview_29
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Crystal-removebg-preview_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 234
+        width: 36
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a56dbea296a625b60800000000000000
+      internalID: 7733360510072772186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crystal-removebg-preview_1
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 234
+        width: 35
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ed10aa50b28fca10800000000000000
+      internalID: 1931906459111529957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crystal-removebg-preview_2
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 236
+        width: 25
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1aeee78481a713c30800000000000000
+      internalID: 4337382160848580257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crystal-removebg-preview_3
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 234
+        width: 16
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e92827fc54099fb30800000000000000
+      internalID: 4321643946946232990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crystal-removebg-preview_4
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 236
+        width: 25
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64306d2953481bcc0800000000000000
+      internalID: -3697028453462834362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crystal-removebg-preview_5
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 234
+        width: 34
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efaaa5cca62f64e50800000000000000
+      internalID: 6793383628443921150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crystal-removebg-preview_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 180
+        width: 36
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5aed777ff3198be0800000000000000
+      internalID: -1474625415044797859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crystal-removebg-preview_7
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 180
+        width: 35
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d88d59ea6821f8460800000000000000
+      internalID: 7246030695126390925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crystal-removebg-preview_8
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 183
+        width: 25
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b56aeb0cc8ee96580800000000000000
+      internalID: -8833266905813965221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crystal-removebg-preview_9
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 180
+        width: 16
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cb5698d2d4d66d20800000000000000
+      internalID: 3271536181373197248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crystal-removebg-preview_10
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 183
+        width: 25
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6cb58890d0fdc380800000000000000
+      internalID: -8949232105812542353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crystal-removebg-preview_11
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 180
+        width: 34
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25d46bc5faa4af5a0800000000000000
+      internalID: -6486790196238594734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crystal-removebg-preview_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 127
+        width: 36
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8053c530a62520be0800000000000000
+      internalID: -1512555909566679800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crystal-removebg-preview_13
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 127
+        width: 35
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9f0f7ebb6f955070800000000000000
+      internalID: 8094551190374649756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crystal-removebg-preview_14
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 129
+        width: 25
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e46b96230cb3f3430800000000000000
+      internalID: 3764793510170572366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crystal-removebg-preview_15
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 127
+        width: 16
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d53d527e2eff67030800000000000000
+      internalID: 3492259911078105949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crystal-removebg-preview_16
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 129
+        width: 25
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c00c1d85c77138170800000000000000
+      internalID: 8179407171068477452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crystal-removebg-preview_17
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 126
+        width: 34
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe0cad50f5d34ff50800000000000000
+      internalID: 6914218806249963759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crystal-removebg-preview_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 73
+        width: 35
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72f3d29aacebf5770800000000000000
+      internalID: 8601803590931922727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crystal-removebg-preview_19
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 73
+        width: 35
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79bcb2d3b810002b0800000000000000
+      internalID: -5620490637420016745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crystal-removebg-preview_20
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 75
+        width: 25
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcd19c5ec150eaea0800000000000000
+      internalID: -5859740443490050611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crystal-removebg-preview_21
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 73
+        width: 16
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9aed9bae8e2caee60800000000000000
+      internalID: 7992414794348617385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crystal-removebg-preview_22
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 75
+        width: 25
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2b5e449604587b90800000000000000
+      internalID: -7243947613390742738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crystal-removebg-preview_23
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 72
+        width: 35
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56d0e78868e9b7a20800000000000000
+      internalID: 3061214672381152613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crystal-removebg-preview_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 19
+        width: 35
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fab368f072f017ac0800000000000000
+      internalID: -3859286745241207889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crystal-removebg-preview_25
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 19
+        width: 34
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3b6e02584f9adbe0800000000000000
+      internalID: -1451672796910425286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crystal-removebg-preview_26
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 21
+        width: 25
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c78fe9f686ec0e620800000000000000
+      internalID: 2801465916169058428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crystal-removebg-preview_27
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 19
+        width: 15
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27a3f6a0476c9c550800000000000000
+      internalID: 6181690165236284018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crystal-removebg-preview_28
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 21
+        width: 25
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52db86bbcaf992600800000000000000
+      internalID: 444061602500099365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crystal-removebg-preview_29
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 19
+        width: 35
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e2bec850a54f0840800000000000000
+      internalID: 5192445450368496356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

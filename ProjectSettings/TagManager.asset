@@ -6,6 +6,10 @@ TagManager:
   tags:
   - BouncyPlatform
   - PlayerProjectile
+  - ClimbingPlatform
+  - Platform
+  - Spikes
+  - LowerBoundary
   layers:
   - Default
   - TransparentFX
@@ -19,13 +23,13 @@ TagManager:
   - Platform
   - PlayerProjectile
   - Portal
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - ClimbingWall
+  - Crystals
+  - Drum
+  - MovablePlatforms
+  - Far BG
+  - 'Mid BG '
+  - Near BG
   - 
   - 
   - 

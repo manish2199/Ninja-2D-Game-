@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7975954425740380897}
   - component: {fileID: 8049018761151831629}
   - component: {fileID: 2050872870552754607}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Weapon
   m_TagString: PlayerProjectile
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 1f638601ca0f34745a11c35adc9c5af1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -109,8 +109,8 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.0016319901, y: 0.79735607}
-      - {x: -0.017777689, y: 0.73323286}
+    - - {x: 0.0052288733, y: 0.4643144}
+      - {x: -0.05027083, y: 0.46255884}
       - {x: -0.07864571, y: 0.46178135}
       - {x: -0.1523271, y: -0.042202756}
       - {x: -0.06024769, y: -0.20577778}
@@ -124,7 +124,7 @@ PolygonCollider2D:
       - {x: 0.07205725, y: -0.55348366}
       - {x: 0.06332727, y: -0.19390547}
       - {x: 0.16432719, y: -0.037584543}
-      - {x: 0.06746507, y: 0.5191093}
+      - {x: 0.067465074, y: 0.465172}
 --- !u!50 &8049018761151831629
 Rigidbody2D:
   serializedVersion: 4
@@ -145,7 +145,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 6
 --- !u!114 &2050872870552754607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,3 +160,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rgb: {fileID: 8049018761151831629}
   speed: 20
+  timer: 3.5

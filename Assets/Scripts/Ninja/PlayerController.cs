@@ -1,65 +1,63 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
     
-   //Input 
-   float xAxisInput;
+  //Input 
+  float xAxisInput;
+  public static event Action<bool> hitTornadoCollider = delegate { };
 
 
-  [Header("Player Movement")]
-  [SerializeField] Rigidbody2D rigidBody;
-  [SerializeField] float speed;
-  [SerializeField] Vector3 colliderOffset;
-  [SerializeField] float groundLength;
-  [SerializeField] LayerMask groundLayer;
+  [Header("\nPlayer Movement\n")]
   bool isGrounded;
   bool jump;
+  bool isSliding;
+  [SerializeField] Rigidbody2D rigidBody;
+  [SerializeField] BoxCollider2D defualtCollider;
+  [SerializeField] BoxCollider2D slidingCollider;
+  [SerializeField] LayerMask groundLayer;
+  [SerializeField] Vector3 colliderOffset;
+  [SerializeField] float speed;
+  [SerializeField] float groundLength;
   [SerializeField] float gravity = 1;
   [SerializeField] float gravityMultiplyer = 5;
   [SerializeField] float jumpForce;
-  bool isSliding;
   [SerializeField] float slidingSpeed;
-  [SerializeField] BoxCollider2D defualtCollider;
-  [SerializeField] BoxCollider2D slidingCollider;
-  
+
 
   [Header("\nShooting\n")]
+  bool isFacingLeft;
   [SerializeField] GameObject projectile;
   [SerializeField] Transform shootingPos;
-  bool isFacingLeft;
 
   [Header("\nAnimation Controller\n")]
   [SerializeField] Animator playerAnim;
    
   [Header("\nGlidding Setting\n")]
   bool gliderCollider;
-  bool isGlidding;
+  float ninjaDirection;
+  [HideInInspector]public bool isGlidding;
   [SerializeField] Transform gliderPos;
   [SerializeField] float gliderOpeneingDistance;
-  float ninjaDirection;
   [SerializeField] float gliddingForce;
-
-  
-
 
   void Update()
   {
     setRayCasts();
 
     playerInputHandler();
-
   }
+
 
   void FixedUpdate()
   {
+   playerMovement();
+
     ModifyGravity();
-
-    playerMovement();
   }
-
   
   //=================================================================================================
 
@@ -79,25 +77,29 @@ public class PlayerController : MonoBehaviour
 
   void ninjaGlidding()
   {
-    if( Input.GetKey(KeyCode.G) && !gliderCollider )
+    if(Input.GetKeyDown(KeyCode.M) && !gliderCollider )
     {
+      
+      // print("Glide");
       isGlidding = true;
       playerAnim.SetBool("Glide",true);
       rigidBody.drag = 9f;
+      hitTornadoCollider(true);
     }
-    if( Input.GetKeyUp(KeyCode.G) || gliderCollider)
+    if( Input.GetKeyUp(KeyCode.M) || gliderCollider)
     {
+      // areaEffector.enabled = false;
       isGlidding = false;
       playerAnim.SetBool("Glide",false);
+      hitTornadoCollider(false);
     }
   }
-
 
   //=================================================================================================
 
 
   void ModifyGravity()
-   {
+  {
     if( !isSliding)
     {
      if( !isGrounded )
@@ -119,7 +121,7 @@ public class PlayerController : MonoBehaviour
      else
      {
         playerAnim.SetBool("Glide",false);
-        rigidBody.gravityScale = 0f;
+        rigidBody.gravityScale = 0.5f;
     }
     }
   }
@@ -132,21 +134,34 @@ public class PlayerController : MonoBehaviour
 
 
   void playerInputHandler()
-  { 
+  {
+
     xAxisInput = Input.GetAxis("Horizontal");
-   
+    
     if(Input.GetButtonDown("Jump"))
     {
       jump = true;
     }
 
-    if(Input.GetKeyDown(KeyCode.LeftShift) && xAxisInput != 0) 
+    if(Input.GetKeyDown(KeyCode.LeftShift) && Mathf.Abs(xAxisInput) > 0) 
     {
       rigidBody.drag = 0f;
       rigidBody.gravityScale = 6f;
       ninjaSlidding();
     }
+ 
+     
+    setDirection();
+    
+ 
+    animationController();
 
+    playerFlip();
+  }
+
+
+  void setDirection()
+  {
     if(transform.localScale.x == 0.4f)
     {
       isFacingLeft = false;
@@ -155,10 +170,6 @@ public class PlayerController : MonoBehaviour
     {
       isFacingLeft = true;
     }
- 
-    animationController();
-
-    playerFlip();
   }
 
   //=================================================================================================
@@ -166,10 +177,11 @@ public class PlayerController : MonoBehaviour
 
   void playerMovement()
   {
-    if(!isSliding)
-    {
-      rigidBody.velocity = new Vector3( xAxisInput * speed , rigidBody.velocity.y);
-    }
+    
+    Vector3 temp = transform.position;
+    temp.x += xAxisInput * speed * Time.fixedDeltaTime;
+    transform.position = temp;
+    
 
     ninjaJump();
 
@@ -182,10 +194,10 @@ public class PlayerController : MonoBehaviour
 
   void ninjaJump()
   {
-    if(jump && isGrounded)
+    if( jump && isGrounded)
     {
-      GetComponent<Rigidbody2D>().velocity= new Vector2(GetComponent<Rigidbody2D>().velocity.x,0);
-      GetComponent<Rigidbody2D>().AddForce(Vector2.up * jumpForce , ForceMode2D.Impulse);
+      // rigidBody.velocity= new Vector2(rigidBody.velocity.x,0);
+      rigidBody.AddForce(Vector2.up * jumpForce , ForceMode2D.Impulse);
       playerAnim.SetTrigger("Jump");
       
       jump = false;
@@ -198,7 +210,7 @@ public class PlayerController : MonoBehaviour
 
   void playerFlip()
   {
-     Vector3 temp = transform.localScale;
+    Vector3 temp = transform.localScale;
 
     if(xAxisInput > 0 )
     {
@@ -221,12 +233,10 @@ public class PlayerController : MonoBehaviour
   void animationController()
   {
     playerAnim.SetFloat("Speed", Mathf.Abs(xAxisInput));
-
-
-    if(Input.GetMouseButtonDown(0))
+ 
+    if(Input.GetKeyDown(KeyCode.O))
     {
       playerAnim.SetTrigger("Throw");
-      // shootProjectile();
     }
 
     if(Input.GetKeyDown(KeyCode.F) && Mathf.Abs(xAxisInput) <= 0.2f ) 
@@ -258,9 +268,6 @@ public class PlayerController : MonoBehaviour
 
     defualtCollider.enabled = false;
     slidingCollider.enabled = true;
-
-    // rigidBody.drag = 0f;
-    // rigidBody.gravityScale = 1f;
   
     if ( !isFacingLeft)
     {
@@ -276,10 +283,10 @@ public class PlayerController : MonoBehaviour
 
   IEnumerator stopSlide()
   {
-    yield return new WaitForSeconds(0.2f);
+    yield return new WaitForSeconds(0.9f);
     
     rigidBody.drag = 0.6f;
-    rigidBody.gravityScale = 0f;
+    rigidBody.gravityScale = 0.5f;
     isSliding = false;
     defualtCollider.enabled = true;
     slidingCollider.enabled = false;
@@ -301,4 +308,20 @@ public class PlayerController : MonoBehaviour
     Gizmos.color = Color.blue;
     Gizmos.DrawLine(gliderPos.position , gliderPos.position + Vector3.down * gliderOpeneingDistance);
    }
+
+  //=================================================================================================
+   
+
+   void OnTriggerEnter2D( Collider2D target)
+   {
+      if(target.gameObject.CompareTag("Spikes"))
+      {
+        print("Hit by Spikes");
+      }
+      if(target.gameObject.CompareTag("LowerBoundary"))
+      {
+        GamePlayController.instance.hitLowerBoundary();
+      }
+   }
+
 }

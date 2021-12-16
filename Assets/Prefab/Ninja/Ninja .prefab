@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1659893934
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1659893935}
+  m_Layer: 8
+  m_Name: 'Wall Check '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1659893935
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1659893934}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.93, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8575065181965564072}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8575065181229091704
 GameObject:
   m_ObjectHideFlags: 0
@@ -133,7 +163,7 @@ GameObject:
   - component: {fileID: 8575065181965564115}
   m_Layer: 8
   m_Name: 'Ninja '
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -152,6 +182,7 @@ Transform:
   - {fileID: 8575065181251893176}
   - {fileID: 8575065181339367980}
   - {fileID: 8575065181229091705}
+  - {fileID: 1659893935}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -193,9 +224,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: e0c5ff8473e240a418207e677cca0faa, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9150943, g: 0.9150943, b: 0.9150943, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -239,7 +270,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.008996725, y: 0}
+  m_Offset: {x: 0.11883736, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -250,7 +281,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.1940627, y: 4.3994074}
+  m_Size: {x: 1.5706558, y: 4.3994074}
   m_EdgeRadius: 0
 --- !u!95 &8575065181965564076
 Animator:
@@ -284,22 +315,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidBody: {fileID: 8575065181965564078}
-  speed: 10
-  colliderOffset: {x: 0.28, y: 0, z: 0}
-  groundLength: 1.09
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 512
-  gravity: 1
-  gravityMultiplyer: 5
-  jumpForce: 9
-  slidingSpeed: 800
   defualtCollider: {fileID: 8575065181965564077}
   slidingCollider: {fileID: 8575065181339368019}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 38400
+  colliderOffset: {x: 0.28, y: 0, z: 0}
+  speed: 10
+  groundLength: 1.45
+  gravity: 1
+  gravityMultiplyer: 5
+  jumpForce: 11
+  slidingSpeed: 650
   projectile: {fileID: 3270336320651996725, guid: 58b23425ab1e6db4d88f336633308cbb,
     type: 3}
   shootingPos: {fileID: 8575065181229091705}
   playerAnim: {fileID: 8575065181965564076}
+  isGlidding: 0
   gliderPos: {fileID: 8575065181251893176}
-  gliderOpeneingDistance: 1.65
+  gliderOpeneingDistance: 1.32
   gliddingForce: 50
