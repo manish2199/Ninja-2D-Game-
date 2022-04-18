@@ -312,16 +312,6 @@ public class PlayerController : MonoBehaviour
   //=================================================================================================
    
 
-   void OnTriggerEnter2D( Collider2D target)
-   {
-      if(target.gameObject.CompareTag("Spikes"))
-      {
-        print("Hit by Spikes");
-      }
-      if(target.gameObject.CompareTag("LowerBoundary"))
-      {
-        GamePlayController.instance.hitLowerBoundary();
-      }
-   }
+  
 
 }
