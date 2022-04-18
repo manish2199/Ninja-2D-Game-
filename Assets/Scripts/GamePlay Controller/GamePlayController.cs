@@ -7,17 +7,23 @@ public class GamePlayController : MonoBehaviour
     public static GamePlayController instance ;
 
     [SerializeField] PlayerController playerScript;
+    [SerializeField] NinjaStat playerStats;
     [SerializeField] GameObject playerGameObject;
-
-
-
+    [SerializeField] Animator ninjaAnim;
+    
     [SerializeField] GameObject[] checkPoints;
 
     void Awake()
     {
         makeInstance();
-        // print(checkPoints.Length);
+    }
 
+    void Update()
+    {
+        // if(playerStats.Lives <=0)
+        // {
+        //   StartCoroutine(ninjaDead());
+        // }
     }
 
     void makeInstance()
@@ -28,7 +34,7 @@ public class GamePlayController : MonoBehaviour
         }
     }
 
-    public void hitLowerBoundary()
+    public void respawnToNearestCheckPoint()
     {
         for(int i=checkPoints.Length - 1; i >= 0; i--)
         {
@@ -47,6 +53,15 @@ public class GamePlayController : MonoBehaviour
     //==========================================================================================================================
 
 
+
+   IEnumerator ninjaDead()
+   {
+       ninjaAnim.SetTrigger("Dead"); 
+
+       yield return new WaitForSeconds(1f);
+
+       playerGameObject.SetActive(false);
+   }
     
 
     
