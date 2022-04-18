@@ -719,7 +719,7 @@ MonoBehaviour:
   target: {fileID: 1417559100}
   offsetX: {x: 0, y: 0, z: -10}
   lerpRate: 3
-  leftLimit: -32
+  leftLimit: -30
   rightLimit: 29
   topLimit: 0.4
   bottomLimit: -0.0001
@@ -774,7 +774,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -31.87, y: 0.21, z: -10}
+  m_LocalPosition: {x: -29.67, y: 0.21, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3193,6 +3193,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 896e5508f3031e4419a5a17f3c887356, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &1417559096 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8575065181965564076, guid: e0f2fdd691088f544a27b58237d97ad0,
+    type: 3}
+  m_PrefabInstance: {fileID: 8575065183121797740}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1417559097 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1417559096, guid: e0f2fdd691088f544a27b58237d97ad0,
+    type: 3}
+  m_PrefabInstance: {fileID: 8575065183121797740}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1417559094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00fbbbc680a623442804792f840c3196, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1417559100 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8575065181965564072, guid: e0f2fdd691088f544a27b58237d97ad0,
@@ -3372,7 +3390,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerScript: {fileID: 1417559095}
+  playerStats: {fileID: 1417559097}
   playerGameObject: {fileID: 1417559094}
+  ninjaAnim: {fileID: 1417559096}
   checkPoints:
   - {fileID: 802051557}
   - {fileID: 2084500248}

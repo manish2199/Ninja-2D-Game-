@@ -475,7 +475,7 @@ MonoBehaviour:
   target: {fileID: 1417559100}
   offsetX: {x: 0, y: 0, z: -10}
   lerpRate: 3
-  leftLimit: -35
+  leftLimit: -33
   rightLimit: 30
   topLimit: 0.4
   bottomLimit: -0.0001
@@ -530,7 +530,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -34.97, y: 0.21, z: -10}
+  m_LocalPosition: {x: -32.98, y: 0.21, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2541,7 +2541,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerScript: {fileID: 1417559095}
+  playerStats: {fileID: 0}
   playerGameObject: {fileID: 1417559094}
+  ninjaAnim: {fileID: 0}
   checkPoints:
   - {fileID: 802051557}
   - {fileID: 2084500248}
@@ -10712,16 +10714,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8575065181251893183, guid: e0f2fdd691088f544a27b58237d97ad0,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8575065181339368019, guid: e0f2fdd691088f544a27b58237d97ad0,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8575065181965564072, guid: e0f2fdd691088f544a27b58237d97ad0,
         type: 3}
       propertyPath: m_RootOrder
@@ -10777,45 +10769,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8575065181965564077, guid: e0f2fdd691088f544a27b58237d97ad0,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 1.3865433
-      objectReference: {fileID: 0}
-    - target: {fileID: 8575065181965564077, guid: e0f2fdd691088f544a27b58237d97ad0,
-        type: 3}
-      propertyPath: m_Offset.x
-      value: 0.04655838
-      objectReference: {fileID: 0}
-    - target: {fileID: 8575065181965564077, guid: e0f2fdd691088f544a27b58237d97ad0,
-        type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 2.32
-      objectReference: {fileID: 0}
-    - target: {fileID: 8575065181965564077, guid: e0f2fdd691088f544a27b58237d97ad0,
-        type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 4.3994074
-      objectReference: {fileID: 0}
-    - target: {fileID: 8575065181965564079, guid: e0f2fdd691088f544a27b58237d97ad0,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 8575065181965564114, guid: e0f2fdd691088f544a27b58237d97ad0,
         type: 3}
       propertyPath: m_Name
       value: 'Ninja '
-      objectReference: {fileID: 0}
-    - target: {fileID: 8575065181965564115, guid: e0f2fdd691088f544a27b58237d97ad0,
-        type: 3}
-      propertyPath: jumpForce
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 8575065181965564115, guid: e0f2fdd691088f544a27b58237d97ad0,
-        type: 3}
-      propertyPath: gliderOpeneingDistance
-      value: 1.99
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0f2fdd691088f544a27b58237d97ad0, type: 3}
