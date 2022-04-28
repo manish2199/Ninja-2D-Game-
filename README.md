@@ -5,7 +5,7 @@
 # Features
 1.Smooth Player Movement
 
-2.Gliding Ability.
+2.Gliding and Sliding Ability.
 
 3.Sharp Shooting Mechanism.
 
