@@ -17,6 +17,9 @@
 
 ##
 
+# Gameplay Video
+YouTube Link - https://youtu.be/ymuNTpmQz-w
+
 # GamePlay Screenshots
 
 <img width="953" alt="ninj1" src="https://user-images.githubusercontent.com/93328047/163780099-b879d012-4048-49ff-899d-51be5253526d.png">
