@@ -7,9 +7,9 @@ using UnityEngine;
 
 public class UIHandler : MonoBehaviour
 {
-   [SerializeField] private InputField createRoomNameIF;
+   [SerializeField] private TMP_InputField createRoomNameIF;
    
-   [SerializeField] private InputField joinRoomNameIF;
+   [SerializeField] private TMP_InputField joinRoomNameIF;
 
    public string CreateRoomNameTxt
    {

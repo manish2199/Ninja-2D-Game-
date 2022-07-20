@@ -76,6 +76,7 @@ public class PhotonConnection : MonoBehaviourPunCallbacks
     public override void OnJoinedRoom()
     {
         Debug.Log("Joined Room");
+        PhotonNetwork.LoadLevel(6);
     }
 
     public override void OnJoinRandomFailed(short returnCode, string message)
