@@ -11,22 +11,37 @@ public class MultiplayerNinja : MonoBehaviour
     [SerializeField] private Rigidbody2D rigidbody2D;
       
     [SerializeField] private PhotonView photonView;     
+ 
+    [SerializeField] private SpriteRenderer spriteRenderer;     
+
+    [SerializeField] private Animator animator;     
     
+    [SerializeField]private AnimationController animationController;
+    
+    [SerializeField]private Transform transform;
+
     private IMovement _playerMovementHandler;
 
     private CameraMove _cameraMove;
     
     private void Awake()
     {
+         SetAnimator();
+        
          SetCamera();
  
          SetMovemenVariables();
     }
 
+    private void SetAnimator()
+    {
+        animationController.SetAnimatorVariables(animator,photonView);
+    }
+
     void SetMovemenVariables()
     {
         _playerMovementHandler = GetComponent<IMovement>();
-       _playerMovementHandler.SetMovementConstraints(photonView,rigidbody2D,this.transform,multiplayerNinjaScpObj.speed,multiplayerNinjaScpObj.jumpForce);  
+       _playerMovementHandler.SetMovementConstraints(photonView,rigidbody2D,transform,multiplayerNinjaScpObj.speed,multiplayerNinjaScpObj.jumpForce,spriteRenderer);  
     }
 
     void SetCamera()
@@ -43,11 +58,14 @@ public class MultiplayerNinja : MonoBehaviour
     private void Update()
     {
         _playerMovementHandler.HandleMultiplayerMovement();
+        
+        animationController.HandleAnimation(_playerMovementHandler.XAxisInput);
+
     }
 
     private void FixedUpdate()
     {
-        if ( _cameraMove && photonView.IsMine)
+        if ( _cameraMove != null && photonView.IsMine)
         {
             _cameraMove.cameraMovement();
         }

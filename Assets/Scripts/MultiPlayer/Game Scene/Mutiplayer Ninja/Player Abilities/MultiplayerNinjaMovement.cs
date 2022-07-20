@@ -1,35 +1,46 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Photon.Pun;
-using TreeEditor;
 using UnityEngine;
 
-public class MultiplayerNinjaMovement : MonoBehaviour , IMovement , IPunObservable
+public class MultiplayerNinjaMovement : MonoBehaviour, IMovement, IPunObservable
 {
     private PhotonView _photonView;
 
     private float _speed;
-    
+
     private float _jumpForce;
 
     private Rigidbody2D _rigidBody;
 
     private Transform _playerTransform;
-    
-    private float _xAxisInput;
 
     private Vector3 _smoothMove;
-    
-    
-    public void SetMovementConstraints(PhotonView photonViewv,Rigidbody2D rigidbody,Transform transform,float speed,float jumpForce)
+
+    private SpriteRenderer _spriteRenderer;
+
+    private float _xAxisInput;
+
+
+    public void SetMovementConstraints(PhotonView photonViewv, Rigidbody2D rigidbody, Transform transform, float speed,
+        float jumpForce, SpriteRenderer spriteRenderer)
     {
         _photonView = photonViewv;
         _speed = speed;
         _jumpForce = jumpForce;
         _rigidBody = rigidbody;
         _playerTransform = transform;
+        _spriteRenderer = spriteRenderer;
     }
-    
+
+    public float XAxisInput
+    {
+        get { return _xAxisInput; }
+        set { _xAxisInput = value; }
+    }
+
+
     public void HandleMultiplayerMovement()
     {
         if (_photonView.IsMine)
@@ -46,14 +57,14 @@ public class MultiplayerNinjaMovement : MonoBehaviour , IMovement , IPunObservab
 
     private void HandleOtherMovement()
     {
-         _playerTransform.position = Vector3.Lerp(_playerTransform.position,_smoothMove,Time.deltaTime*10);
+        _playerTransform.position = Vector3.Lerp(_playerTransform.position, _smoothMove, Time.deltaTime * 10);
     }
 
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
         if (stream.IsWriting)
         {
-           stream.SendNext(_playerTransform);   
+            stream.SendNext(_playerTransform.position);
         }
         else if (stream.IsReading)
         {
@@ -63,12 +74,44 @@ public class MultiplayerNinjaMovement : MonoBehaviour , IMovement , IPunObservab
 
     private void HandleMyMovement()
     {
-        _xAxisInput = Input.GetAxis("Horizontal");
-        
+        XAxisInput = Input.GetAxis("Horizontal");
+
+        FlipPlayer();
+
         Vector3 temp = _playerTransform.position;
         temp.x += _xAxisInput * _speed * Time.deltaTime;
         _playerTransform.position = temp;
     }
+
+
+    private void FlipPlayer()
+    {
+        if (_xAxisInput > 0)
+        {
+            _spriteRenderer.flipX = false;
+            _photonView.RPC("FlipPlayerLeft",RpcTarget.Others);
+        }
+        else if (_xAxisInput < 0)
+        {
+            _spriteRenderer.flipX = true;
+            _photonView.RPC("FlipPlayerRight",RpcTarget.Others);
+        }
+    }
+
+    [PunRPC]
+    void FlipPlayerLeft()
+    {
+        _spriteRenderer.flipX = false;
+    }
+    
+    [PunRPC]
+    void FlipPlayerRight()
+    {
+        _spriteRenderer.flipX = true;        
+    }
+    
+    
+
 }
 
 

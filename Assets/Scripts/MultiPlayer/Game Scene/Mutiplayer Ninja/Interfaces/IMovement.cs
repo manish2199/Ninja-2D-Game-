@@ -5,6 +5,7 @@ using UnityEngine;
 
 public interface IMovement
 {
-    void SetMovementConstraints(PhotonView photonViewv,Rigidbody2D rigidbody,Transform transform,float speed,float jumpForce);
+    float XAxisInput  {  get;  set;  }
+    void SetMovementConstraints(PhotonView photonViewv,Rigidbody2D rigidbody,Transform transform,float speed,float jumpForce,SpriteRenderer spriteRenderer);
     void HandleMultiplayerMovement();
 }

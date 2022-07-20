@@ -18,12 +18,7 @@ public class CameraMove : MonoBehaviour
   [SerializeField] float topLimit;
   [SerializeField] float bottomLimit;
 
-
-  // void FixedUpdate()
-  // {
-    // cameraMovement();
-  // }
-
+  
 
   public void cameraMovement()
   {
