@@ -54,7 +54,7 @@ public class PlayerController : MonoBehaviour
 
   void FixedUpdate()
   {
-   playerMovement();
+    playerMovement();
 
     ModifyGravity();
   }

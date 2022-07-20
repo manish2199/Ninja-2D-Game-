@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraMove : MonoBehaviour
 {
 
-  [SerializeField]Transform target;
+  [HideInInspector] public Transform target;
 
   [SerializeField] Vector3 offsetX;
 
@@ -19,13 +19,13 @@ public class CameraMove : MonoBehaviour
   [SerializeField] float bottomLimit;
 
 
-  void FixedUpdate()
-  {
-    cameraMovement();
-  }
+  // void FixedUpdate()
+  // {
+    // cameraMovement();
+  // }
 
 
-  void cameraMovement()
+  public void cameraMovement()
   {
     Vector3 targetPos = target.position + offsetX;
 
