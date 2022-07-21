@@ -12,6 +12,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MultiPlayer/Game Manager/MultiplayerGameplayManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MultiPlayer/Game Scene/Mutiplayer Ninja/Player Abilities/MultiplayerJump.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MultiPlayer/Game Scene/Mutiplayer Ninja/Scriptable Object/MultiplayerNinjaScpObj.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MultiPlayer/PhotonConnection/PhotonConnection.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MultiPlayer/UI Handler/UIHandler.cs" root0="FORCE_HIGHLIGHTING" />
@@ -87,7 +88,9 @@
       <updated>1658152112691</updated>
       <workItem from="1658152113674" duration="5322000" />
       <workItem from="1658212739641" duration="2720000" />
-      <workItem from="1658297452266" duration="19513000" />
+      <workItem from="1658297452266" duration="25299000" />
+      <workItem from="1658385471530" duration="327000" />
+      <workItem from="1658385830245" duration="8676000" />
     </task>
     <servers />
   </component>

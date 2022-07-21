@@ -8,40 +8,31 @@ public class MultiplayerNinja : MonoBehaviour
 {
     [SerializeField] private MultiplayerNinjaScpObj multiplayerNinjaScpObj;
     
-    [SerializeField] private Rigidbody2D rigidbody2D;
-      
-    [SerializeField] private PhotonView photonView;     
- 
-    [SerializeField] private SpriteRenderer spriteRenderer;     
+    [SerializeField] private PhotonView photonView;
 
-    [SerializeField] private Animator animator;     
+    [SerializeField] private Animator animator;
     
-    [SerializeField]private AnimationController animationController;
-    
-    [SerializeField]private Transform transform;
-
     private IMovement _playerMovementHandler;
+
+    private IJUMP _playerJumpHandler;
 
     private CameraMove _cameraMove;
     
     private void Awake()
-    {
-         SetAnimator();
-        
+    { 
          SetCamera();
  
          SetMovemenVariables();
     }
 
-    private void SetAnimator()
-    {
-        animationController.SetAnimatorVariables(animator,photonView);
-    }
+
 
     void SetMovemenVariables()
-    {
+    { 
         _playerMovementHandler = GetComponent<IMovement>();
-       _playerMovementHandler.SetMovementConstraints(photonView,rigidbody2D,transform,multiplayerNinjaScpObj.speed,multiplayerNinjaScpObj.jumpForce,spriteRenderer);  
+        _playerJumpHandler = GetComponent<IJUMP>();
+        _playerMovementHandler.SetMovementVariables(animator,multiplayerNinjaScpObj.speed);  
+        _playerJumpHandler.SetJumpVariables(animator,multiplayerNinjaScpObj.jumpForce);
     }
 
     void SetCamera()
@@ -50,7 +41,6 @@ public class MultiplayerNinja : MonoBehaviour
         {
             _cameraMove = GameObject.Find("Main Camera").GetComponent<CameraMove>();
             _cameraMove.target = this.transform;
-
         }
     }
 
@@ -58,16 +48,16 @@ public class MultiplayerNinja : MonoBehaviour
     private void Update()
     {
         _playerMovementHandler.HandleMultiplayerMovement();
-        
-        animationController.HandleAnimation(_playerMovementHandler.XAxisInput);
-
     }
+    
 
     private void FixedUpdate()
     {
-        if ( _cameraMove != null && photonView.IsMine)
+        if ( _cameraMove && photonView.IsMine)
         {
             _cameraMove.cameraMovement();
         }
+        
+        _playerJumpHandler.HandleJump();
     }
 }

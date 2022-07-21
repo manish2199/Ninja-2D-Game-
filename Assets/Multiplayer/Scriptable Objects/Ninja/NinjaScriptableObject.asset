@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: NinjaScriptableObject
   m_EditorClassIdentifier: 
   speed: 10
-  jumpForce: 11
+  jumpForce: 17

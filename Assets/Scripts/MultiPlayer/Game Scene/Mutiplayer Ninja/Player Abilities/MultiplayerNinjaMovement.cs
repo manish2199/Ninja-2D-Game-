@@ -6,41 +6,35 @@ using UnityEngine;
 
 public class MultiplayerNinjaMovement : MonoBehaviour, IMovement, IPunObservable
 {
-    private PhotonView _photonView;
+   [SerializeField] private PhotonView _photonView;
 
-    private float _speed;
+   [SerializeField] private Rigidbody2D _rigidBody;
+   
+   [SerializeField] private Transform _playerTransform;
+   
+   [SerializeField] private SpriteRenderer _spriteRenderer;
 
-    private float _jumpForce;
+   private Animator _animator;
+   
+   private float _speed;
 
-    private Rigidbody2D _rigidBody;
-
-    private Transform _playerTransform;
-
-    private Vector3 _smoothMove;
-
-    private SpriteRenderer _spriteRenderer;
-
-    private float _xAxisInput;
-
-
-    public void SetMovementConstraints(PhotonView photonViewv, Rigidbody2D rigidbody, Transform transform, float speed,
-        float jumpForce, SpriteRenderer spriteRenderer)
+   private Vector3 _smoothMove;
+   
+   #region Getters_And_Setters
+    public void SetMovementVariables(Animator animator,float speed)
     {
-        _photonView = photonViewv;
+        _animator = animator;
         _speed = speed;
-        _jumpForce = jumpForce;
-        _rigidBody = rigidbody;
-        _playerTransform = transform;
-        _spriteRenderer = spriteRenderer;
     }
 
     public float XAxisInput
     {
-        get { return _xAxisInput; }
-        set { _xAxisInput = value; }
+        get;
+        set;
     }
+   #endregion
 
-
+   #region Movement_Logic
     public void HandleMultiplayerMovement()
     {
         if (_photonView.IsMine)
@@ -53,9 +47,17 @@ public class MultiplayerNinjaMovement : MonoBehaviour, IMovement, IPunObservable
             // other player
             HandleOtherMovement();
         }
+        
+        AnimateMovement();
+    }
+    
+    private void AnimateMovement()
+    {
+        _animator.SetFloat("Speed", Mathf.Abs(XAxisInput)); 
+        _photonView.RPC("HandleMultiplayerMovementAnimation",RpcTarget.Others);
     }
 
-    private void HandleOtherMovement()
+    public void HandleOtherMovement()
     {
         _playerTransform.position = Vector3.Lerp(_playerTransform.position, _smoothMove, Time.deltaTime * 10);
     }
@@ -79,23 +81,31 @@ public class MultiplayerNinjaMovement : MonoBehaviour, IMovement, IPunObservable
         FlipPlayer();
 
         Vector3 temp = _playerTransform.position;
-        temp.x += _xAxisInput * _speed * Time.deltaTime;
+        temp.x += XAxisInput * _speed * Time.deltaTime;
         _playerTransform.position = temp;
     }
 
 
     private void FlipPlayer()
     {
-        if (_xAxisInput > 0)
+        if (XAxisInput > 0)
         {
             _spriteRenderer.flipX = false;
             _photonView.RPC("FlipPlayerLeft",RpcTarget.Others);
         }
-        else if (_xAxisInput < 0)
+        else if (XAxisInput < 0)
         {
             _spriteRenderer.flipX = true;
             _photonView.RPC("FlipPlayerRight",RpcTarget.Others);
         }
+    }
+   #endregion
+
+   #region RPC_Calls
+    [PunRPC]
+    private void HandleMultiplayerMovementAnimation()
+    {
+        _animator.SetFloat("Speed", Mathf.Abs(XAxisInput));
     }
 
     [PunRPC]
@@ -109,8 +119,7 @@ public class MultiplayerNinjaMovement : MonoBehaviour, IMovement, IPunObservable
     {
         _spriteRenderer.flipX = true;        
     }
-    
-    
+    #endregion
 
 }
 

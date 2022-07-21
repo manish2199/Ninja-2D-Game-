@@ -130,13 +130,12 @@ GameObject:
   - component: {fileID: 1670345984579027998}
   - component: {fileID: 1670345984579027997}
   - component: {fileID: 1670345984579027996}
-  - component: {fileID: 1670345984579028067}
   - component: {fileID: 1670345984579028078}
   - component: {fileID: 1670345984579028079}
   - component: {fileID: 1670345984579028076}
   - component: {fileID: 1670345984579028077}
-  - component: {fileID: 2939622033045774842}
   - component: {fileID: 1336964538129446714}
+  - component: {fileID: 6779537855159316613}
   m_Layer: 8
   m_Name: 'Multiplayer Ninja Player '
   m_TagString: Player
@@ -247,7 +246,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.04655838, y: 0}
+  m_Offset: {x: -0.013938308, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -258,7 +257,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.3865433, y: 4.3994074}
+  m_Size: {x: 1.5075366, y: 4.3994074}
   m_EdgeRadius: 0
 --- !u!95 &1670345984579027996
 Animator:
@@ -279,39 +278,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1670345984579028067
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1670345984579028066}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 896e5508f3031e4419a5a17f3c887356, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rigidBody: {fileID: 1670345984579027998}
-  defualtCollider: {fileID: 1670345984579027997}
-  slidingCollider: {fileID: 1670345983889262307}
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 38400
-  colliderOffset: {x: 0.28, y: 0, z: 0}
-  speed: 10
-  groundLength: 1.45
-  gravity: 1
-  gravityMultiplyer: 5
-  jumpForce: 11
-  slidingSpeed: 650
-  projectile: {fileID: 3270336320651996725, guid: 58b23425ab1e6db4d88f336633308cbb,
-    type: 3}
-  shootingPos: {fileID: 1670345983706200009}
-  playerAnim: {fileID: 1670345984579027996}
-  isGlidding: 0
-  gliderPos: {fileID: 1670345983665572616}
-  gliderOpeneingDistance: 1.99
-  gliddingForce: 50
 --- !u!114 &1670345984579028078
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -326,12 +292,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   multiplayerNinjaScpObj: {fileID: 11400000, guid: 64dd1a47a0d56cf4e976b12023b9f04f,
     type: 2}
-  rigidbody2D: {fileID: 1670345984579027998}
   photonView: {fileID: 1670345984579028076}
-  spriteRenderer: {fileID: 1670345984579027999}
   animator: {fileID: 1670345984579027996}
-  animationController: {fileID: 2939622033045774842}
-  transform: {fileID: 1670345984579027992}
 --- !u!114 &1670345984579028079
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -344,6 +306,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e132990909a1a484a8c00c19ebf07393, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _photonView: {fileID: 1670345984579028076}
+  _rigidBody: {fileID: 1670345984579027998}
+  _playerTransform: {fileID: 1670345984579027992}
+  _spriteRenderer: {fileID: 1670345984579027999}
 --- !u!114 &1670345984579028076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -384,18 +350,6 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 1
   m_UseLocal: 1
---- !u!114 &2939622033045774842
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1670345984579028066}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e68d232d625f4140b5597cbfbb7eb28, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1336964538129446714
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -410,8 +364,53 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShowLayerWeightsInspector: 1
   ShowParameterInspector: 1
-  m_SynchronizeParameters: []
-  m_SynchronizeLayers: []
+  m_SynchronizeParameters:
+  - Type: 9
+    SynchronizeType: 0
+    Name: Dead
+  - Type: 1
+    SynchronizeType: 2
+    Name: Speed
+  - Type: 9
+    SynchronizeType: 0
+    Name: Jump
+  - Type: 4
+    SynchronizeType: 0
+    Name: Glide
+  - Type: 4
+    SynchronizeType: 0
+    Name: Climb
+  - Type: 9
+    SynchronizeType: 0
+    Name: Slide
+  - Type: 9
+    SynchronizeType: 0
+    Name: Sword
+  - Type: 9
+    SynchronizeType: 0
+    Name: Throw
+  m_SynchronizeLayers:
+  - SynchronizeType: 0
+    LayerIndex: 0
+--- !u!114 &6779537855159316613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1670345984579028066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba81bb99f9623be4eb2996610ebaa1f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerTransform: {fileID: 1670345984579027992}
+  _colliderOffset: {x: 0.31, y: 0, z: 0}
+  _groundLength: 1.39
+  _groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  photonView: {fileID: 1670345984579028076}
 --- !u!1 &6817983647915208539
 GameObject:
   m_ObjectHideFlags: 0
