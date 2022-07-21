@@ -10,14 +10,8 @@ public class Projectile : MonoBehaviour
     [SerializeField]float speed;
     [SerializeField]float timer;
 
-
-//  public int damage ;
-    
     float dir;
-
     
-
-
 
     public void shootProjectile(bool isNinjaFacingLeft)
     {
@@ -26,17 +20,13 @@ public class Projectile : MonoBehaviour
             rgb.velocity = new Vector2(-speed , 0 );
             transform.eulerAngles = new Vector3 ( 0 ,0 ,90);
             dir = 90; 
-            // print(isNinjaFacingLeft);
         }
         if (!isNinjaFacingLeft)
         {
             rgb.velocity = new Vector2(speed , 0 );
             transform.eulerAngles = new Vector3 ( 0 ,0 , -90);
              dir = -90;
-            // print(isNinjaFacingLeft);
         }
-
-        // Destroy(gameObject , 5f);
     }
 
     void OnCollisionEnter2D( Collision2D target)

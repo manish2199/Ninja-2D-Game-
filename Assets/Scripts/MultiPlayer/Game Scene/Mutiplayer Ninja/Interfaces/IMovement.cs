@@ -5,6 +5,7 @@ using UnityEngine;
 
 public interface IMovement
 {
+    bool IsFacingLeft { get; set; }
     float XAxisInput  {  get;  set;  }
 
     void SetMovementVariables(Animator animator,float speed);

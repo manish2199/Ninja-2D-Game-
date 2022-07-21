@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-// using UnityEngine.UI;
 using TMPro;
 using Photon.Pun;
 using UnityEngine;
@@ -23,15 +22,46 @@ public class MultiplayerNinja : MonoBehaviour
 
     private IJUMP _playerJumpHandler;
 
+    private IShoot _playerShootHandler;
+
     private CameraMove _cameraMove;
-    #endregion
     
+    #endregion
+   
+    #region Initializers
+    void InitializeMovemenVariables()
+    { 
+        _playerMovementHandler = GetComponent<IMovement>();
+        _playerJumpHandler = GetComponent<IJUMP>();
+        _playerMovementHandler.SetMovementVariables(animator,multiplayerNinjaScpObj.speed);  
+        _playerJumpHandler.SetJumpVariables(animator,multiplayerNinjaScpObj.jumpForce);
+    }
+
+    void InitializeShootVariables()
+    {
+        _playerShootHandler = GetComponent<IShoot>();
+        _playerShootHandler.SetShootVariables(photonView,animator);
+    }
+    
+    void SetCamera()
+    {
+        if (photonView.IsMine)
+        {
+            _cameraMove = GameObject.Find("Main Camera").GetComponent<CameraMove>();
+            _cameraMove.target = this.transform;
+        }
+    }
+
+    #endregion
+
     #region Unity_Functions
     private void Awake()
     { 
          SetCamera();
  
-         SetMovemenVariables();
+         InitializeMovemenVariables();
+         
+         InitializeShootVariables();
     }
 
     private void Start()
@@ -59,24 +89,19 @@ public class MultiplayerNinja : MonoBehaviour
     private void Update()
     {
         _playerMovementHandler.HandleMultiplayerMovement();
+        
+        _playerShootHandler.HandlePlayerShoot(_playerMovementHandler.IsFacingLeft);
     }
     #endregion
 
-    #region Initializers
-    void SetMovemenVariables()
-    { 
-        _playerMovementHandler = GetComponent<IMovement>();
-        _playerJumpHandler = GetComponent<IJUMP>();
-        _playerMovementHandler.SetMovementVariables(animator,multiplayerNinjaScpObj.speed);  
-        _playerJumpHandler.SetJumpVariables(animator,multiplayerNinjaScpObj.jumpForce);
-    }
-    void SetCamera()
+    #region Public_Funtions
+
+    public void ShootProjectile()
     {
-        if (photonView.IsMine)
-        {
-            _cameraMove = GameObject.Find("Main Camera").GetComponent<CameraMove>();
-            _cameraMove.target = this.transform;
-        }
+        _playerShootHandler.ShootProjectile();
     }
+    
+
     #endregion
 }
+

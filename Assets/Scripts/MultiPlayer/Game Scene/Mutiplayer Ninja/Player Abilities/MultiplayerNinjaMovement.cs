@@ -15,7 +15,7 @@ public class MultiplayerNinjaMovement : MonoBehaviour, IMovement, IPunObservable
    
    [SerializeField] private SpriteRenderer _spriteRenderer;
     #endregion
-    
+
     #region Private_Fields
     private Animator _animator;
    
@@ -36,9 +36,16 @@ public class MultiplayerNinjaMovement : MonoBehaviour, IMovement, IPunObservable
         get;
         set;
     }
+
+    public bool IsFacingLeft
+    {
+        get;
+        set;
+    }
+    
    #endregion
 
-   #region Unity_Functions
+    #region Unity_Functions
 
    private void Start()
    {
@@ -105,11 +112,13 @@ public class MultiplayerNinjaMovement : MonoBehaviour, IMovement, IPunObservable
         if (XAxisInput > 0)
         {
             _spriteRenderer.flipX = false;
+            IsFacingLeft = true;
             _photonView.RPC("FlipPlayerLeft",RpcTarget.Others);
         }
         else if (XAxisInput < 0)
         {
             _spriteRenderer.flipX = true;
+            IsFacingLeft = false;
             _photonView.RPC("FlipPlayerRight",RpcTarget.Others);
         }
     }
@@ -126,125 +135,16 @@ public class MultiplayerNinjaMovement : MonoBehaviour, IMovement, IPunObservable
     void FlipPlayerLeft()
     {
         _spriteRenderer.flipX = false;
+        IsFacingLeft = true;
     }
     
     [PunRPC]
     void FlipPlayerRight()
     {
-        _spriteRenderer.flipX = true;        
+        _spriteRenderer.flipX = true;
+        IsFacingLeft = false;
     }
     #endregion
 
 }
 
-
-
- // void playerInputHandler()
- //  {
- //    
- //    if(Input.GetButtonDown("Jump"))
- //    {
- //      jump = true;
- //    }
- //
- //    if(Input.GetKeyDown(KeyCode.LeftShift) && Mathf.Abs(xAxisInput) > 0) 
- //    {
- //      rigidBody.drag = 0f;
- //      rigidBody.gravityScale = 6f;
- //      ninjaSlidding();
- //    }
- //
- //     
- //    setDirection();
- //    
- //
- //    animationController();
- //
- //    playerFlip();
- //  }
- //
- //
- //  void setDirection()
- //  {
- //    if(transform.localScale.x == 0.4f)
- //    {
- //      isFacingLeft = false;
- //    }
- //    if(transform.localScale.x == -0.4f)
- //    {
- //      isFacingLeft = true;
- //    }
- //  }
- //
- //  //=================================================================================================
- //
- //
- //  void playerMovement()
- //  {
- //    
- //   
- //    
- //
- //    ninjaJump();
- //
- //    ninjaGlidding();
- //  }
- //
- //
- //  //=================================================================================================
- //
- //
- //  void ninjaJump()
- //  {
- //    if( jump && isGrounded)
- //    {
- //      // rigidBody.velocity= new Vector2(rigidBody.velocity.x,0);
- //      rigidBody.AddForce(Vector2.up * jumpForce , ForceMode2D.Impulse);
- //      playerAnim.SetTrigger("Jump");
- //      
- //      jump = false;
- //    }
- //  }
- //
- //  
- //  //=================================================================================================
- //  
- //
- //  void playerFlip()
- //  {
- //    Vector3 temp = transform.localScale;
- //
- //    if(xAxisInput > 0 )
- //    {
- //      temp.x = Mathf.Abs(temp.x);
- //      ninjaDirection = temp.x;
- //    }
- //    if(xAxisInput < 0 )
- //    {
- //      temp.x = Mathf.Abs(temp.x) * (-1f);
- //      ninjaDirection = temp.x;
- //    }
- //    transform.localScale = temp;
- //  }
- //   
- //
- //  //=================================================================================================
- //
- //  
- //  
- //  void animationController()
- //  {
- //    playerAnim.SetFloat("Speed", Mathf.Abs(xAxisInput));
- //
- //    if(Input.GetKeyDown(KeyCode.O))
- //    {
- //      playerAnim.SetTrigger("Throw");
- //    }
- //
- //    if(Input.GetKeyDown(KeyCode.F) && Mathf.Abs(xAxisInput) <= 0.2f ) 
- //    {
- //      playerAnim.SetTrigger("Sword");
- //    }   
- //
- //
- //  }

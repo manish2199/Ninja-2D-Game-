@@ -45,6 +45,10 @@ MonoBehaviour:
   - HandleMultiplayerJumpAnimation
   - HandleMultiplayerMovementAnimation
   - HandleOtherPlayerJump
+  - ChangeDirection
+  - DestroyProjectile
+  - FreezePosition
+  - HandleShootAnimation
   DisableAutoOpenWizard: 1
   ShowSettings: 0
   DevRegionSetOnce: 1
