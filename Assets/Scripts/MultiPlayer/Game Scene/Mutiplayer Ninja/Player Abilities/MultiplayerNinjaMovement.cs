@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class MultiplayerNinjaMovement : MonoBehaviour, IMovement, IPunObservable
 {
+    #region Serialized_Fields
    [SerializeField] private PhotonView _photonView;
 
    [SerializeField] private Rigidbody2D _rigidBody;
@@ -13,14 +14,17 @@ public class MultiplayerNinjaMovement : MonoBehaviour, IMovement, IPunObservable
    [SerializeField] private Transform _playerTransform;
    
    [SerializeField] private SpriteRenderer _spriteRenderer;
-
-   private Animator _animator;
+    #endregion
+    
+    #region Private_Fields
+    private Animator _animator;
    
-   private float _speed;
+    private float _speed;
 
-   private Vector3 _smoothMove;
+    private Vector3 _smoothMove;
+    #endregion
    
-   #region Getters_And_Setters
+    #region Getters_And_Setters
     public void SetMovementVariables(Animator animator,float speed)
     {
         _animator = animator;
@@ -34,7 +38,17 @@ public class MultiplayerNinjaMovement : MonoBehaviour, IMovement, IPunObservable
     }
    #endregion
 
-   #region Movement_Logic
+   #region Unity_Functions
+
+   private void Start()
+   {
+       PhotonNetwork.SendRate = 30;
+       PhotonNetwork.SerializationRate = 15;
+   }
+
+   #endregion
+   
+    #region Movement_Logic
     public void HandleMultiplayerMovement()
     {
         if (_photonView.IsMine)
@@ -101,7 +115,7 @@ public class MultiplayerNinjaMovement : MonoBehaviour, IMovement, IPunObservable
     }
    #endregion
 
-   #region RPC_Calls
+    #region RPC_Calls
     [PunRPC]
     private void HandleMultiplayerMovementAnimation()
     {

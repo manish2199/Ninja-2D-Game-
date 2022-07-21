@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class MultiplayerJump : MonoBehaviour , IJUMP
 {
+    #region Serialized_Fields
+    
     [SerializeField] private Transform _playerTransform;
 
     [SerializeField] Vector3 _colliderOffset;
@@ -17,14 +19,16 @@ public class MultiplayerJump : MonoBehaviour , IJUMP
     [SerializeField] private PhotonView photonView;
     
     [SerializeField] private Rigidbody2D _rigidbody2D;
+    #endregion
 
+    #region Private_Fields
     private Animator _animator;
     
     private bool _IsGrounded = false;
 
     private float _jumpForce;
+    #endregion
     
-
     #region Getters_And_Setters
     public bool CanJump
     {
@@ -44,8 +48,10 @@ public class MultiplayerJump : MonoBehaviour , IJUMP
     private void Start()
     {
        _rigidbody2D = GetComponent<Rigidbody2D>();
+       PhotonNetwork.SendRate = 30;
+       PhotonNetwork.SerializationRate = 15;
     }
-
+    
     private void Update()
     {
         if(photonView.IsMine)

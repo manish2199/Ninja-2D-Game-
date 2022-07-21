@@ -7,10 +7,13 @@ using UnityEngine;
 
 public class UIHandler : MonoBehaviour
 {
+   #region Serialized_Fields
    [SerializeField] private TMP_InputField createRoomNameIF;
    
    [SerializeField] private TMP_InputField joinRoomNameIF;
-
+   #endregion
+   
+   #region Getters_And_Setters
    public string CreateRoomNameTxt
    {
       get
@@ -26,4 +29,5 @@ public class UIHandler : MonoBehaviour
          return joinRoomNameIF.text;
       }
    }
+   #endregion
 }
