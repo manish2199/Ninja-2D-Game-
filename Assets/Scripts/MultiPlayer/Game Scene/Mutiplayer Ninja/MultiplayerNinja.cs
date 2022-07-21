@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+// using UnityEngine.UI;
+using TMPro;
 using Photon.Pun;
 using UnityEngine;
 
@@ -12,6 +14,8 @@ public class MultiplayerNinja : MonoBehaviour
     [SerializeField] private PhotonView photonView;
 
     [SerializeField] private Animator animator;
+
+    [SerializeField] private TextMeshProUGUI playerNameText; 
     #endregion
 
     #region Private_Variables
@@ -29,6 +33,19 @@ public class MultiplayerNinja : MonoBehaviour
  
          SetMovemenVariables();
     }
+
+    private void Start()
+    {
+        if (photonView.IsMine)
+        {
+            playerNameText.text = PhotonNetwork.NickName;
+        }
+        else
+        {
+            playerNameText.text = photonView.Owner.NickName;
+        }
+    }
+
     private void FixedUpdate()
     {
         if ( _cameraMove && photonView.IsMine)

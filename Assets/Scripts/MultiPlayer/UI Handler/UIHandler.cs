@@ -11,6 +11,12 @@ public class UIHandler : MonoBehaviour
    [SerializeField] private TMP_InputField createRoomNameIF;
    
    [SerializeField] private TMP_InputField joinRoomNameIF;
+   
+   [SerializeField] private TMP_InputField playerNameIF;
+
+   [SerializeField] private Button connectToPhotonButton;
+   
+   [SerializeField] private TextMeshProUGUI ConnectedPanelPlayerName ;   
    #endregion
    
    #region Getters_And_Setters
@@ -29,5 +35,31 @@ public class UIHandler : MonoBehaviour
          return joinRoomNameIF.text;
       }
    }
+
+   public Button PhotonConnectionButton
+   {
+      get
+      {
+         return connectToPhotonButton;
+      }
+   }
+   
+   public string PlayerNameTxt
+   {
+      get
+      {
+         return playerNameIF.text;
+      }
+   }
+   
+   public TextMeshProUGUI PlayerNameTMpro
+   {
+      get
+      {
+         return ConnectedPanelPlayerName;
+      }
+   }
+   
+   
    #endregion
 }

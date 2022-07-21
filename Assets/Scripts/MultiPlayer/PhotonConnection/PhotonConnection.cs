@@ -6,14 +6,15 @@ using UnityEngine;
 using WebSocketSharp;
 
 public class PhotonConnection : MonoBehaviourPunCallbacks
-{ 
+{
+    #region Serialized_Fields
     [SerializeField] private GameObject connectedPanel;
 
     [SerializeField] private GameObject connectionFailPanel;
 
     [SerializeField] private UIHandler UIHandler;
-
-
+    #endregion
+    
     #region PhotonButtonFunctions
     private bool IsTextEmpty(string textField)
     {
@@ -23,6 +24,7 @@ public class PhotonConnection : MonoBehaviourPunCallbacks
     public void ConnectToPhoton()
     {
         PhotonNetwork.ConnectUsingSettings();
+        PhotonNetwork.NickName = UIHandler.PlayerNameTxt;
     }
     
     public void CreateRoom()
@@ -50,8 +52,23 @@ public class PhotonConnection : MonoBehaviourPunCallbacks
         }
         PhotonNetwork.JoinRoom(joinRoomName);
     }
+
     #endregion
 
+    #region InputFields_Event_Functions
+
+    public void OnIFValueChange()
+    {
+        if (UIHandler.PlayerNameTxt.Length > 2)
+        {
+            UIHandler.PhotonConnectionButton.interactable = true;
+        }
+        else
+        {
+            UIHandler.PhotonConnectionButton.interactable = false;            
+        }
+    }
+    #endregion
 
     #region PhotonCallbacks
     public override void OnConnectedToMaster()
@@ -70,12 +87,13 @@ public class PhotonConnection : MonoBehaviourPunCallbacks
         {
             connectionFailPanel.SetActive(false);
         }
+
+        UIHandler.PlayerNameTMpro.text = PhotonNetwork.NickName;
         connectedPanel.SetActive(true);
     }
 
     public override void OnJoinedRoom()
     {
-        Debug.Log("Joined Room");
         PhotonNetwork.LoadLevel(2);
     }
 

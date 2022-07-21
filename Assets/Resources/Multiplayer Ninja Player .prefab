@@ -132,10 +132,10 @@ GameObject:
   - component: {fileID: 1670345984579027996}
   - component: {fileID: 1670345984579028078}
   - component: {fileID: 1670345984579028079}
+  - component: {fileID: 6779537855159316613}
   - component: {fileID: 1670345984579028076}
   - component: {fileID: 1670345984579028077}
   - component: {fileID: 1336964538129446714}
-  - component: {fileID: 6779537855159316613}
   - component: {fileID: 4630178208089426777}
   m_Layer: 8
   m_Name: 'Multiplayer Ninja Player '
@@ -295,6 +295,7 @@ MonoBehaviour:
     type: 2}
   photonView: {fileID: 1670345984579028076}
   animator: {fileID: 1670345984579027996}
+  playerNameText: {fileID: 6817983648393585249}
 --- !u!114 &1670345984579028079
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -311,6 +312,26 @@ MonoBehaviour:
   _rigidBody: {fileID: 1670345984579027998}
   _playerTransform: {fileID: 1670345984579027992}
   _spriteRenderer: {fileID: 1670345984579027999}
+--- !u!114 &6779537855159316613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1670345984579028066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba81bb99f9623be4eb2996610ebaa1f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerTransform: {fileID: 1670345984579027992}
+  _colliderOffset: {x: 0.31, y: 0, z: 0}
+  _groundLength: 1.39
+  _groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  photonView: {fileID: 1670345984579028076}
+  _rigidbody2D: {fileID: 1670345984579027998}
 --- !u!114 &1670345984579028076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -394,26 +415,6 @@ MonoBehaviour:
   m_SynchronizeLayers:
   - SynchronizeType: 0
     LayerIndex: 0
---- !u!114 &6779537855159316613
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1670345984579028066}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba81bb99f9623be4eb2996610ebaa1f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _playerTransform: {fileID: 1670345984579027992}
-  _colliderOffset: {x: 0.31, y: 0, z: 0}
-  _groundLength: 1.39
-  _groundLayer:
-    serializedVersion: 2
-    m_Bits: 512
-  photonView: {fileID: 1670345984579028076}
-  _rigidbody2D: {fileID: 0}
 --- !u!114 &4630178208089426777
 MonoBehaviour:
   m_ObjectHideFlags: 0
