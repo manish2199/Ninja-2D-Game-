@@ -1,8 +1,11 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices.WindowsRuntime;
 using Photon.Pun;
 using Photon.Realtime;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 using WebSocketSharp;
 
 public class PhotonConnection : MonoBehaviourPunCallbacks
@@ -12,7 +15,19 @@ public class PhotonConnection : MonoBehaviourPunCallbacks
 
     [SerializeField] private GameObject connectionFailPanel;
 
+    [SerializeField] private GameObject inRoomPanel;
+
+    [SerializeField] private Transform playerListingTransform;
+
+    [SerializeField] private PlayerItem playerItemPrefab;
+
     [SerializeField] private UIHandler UIHandler;
+    #endregion
+    
+    #region Private_Fields
+
+    private List<PlayerItem> _playerItems = new List<PlayerItem>();
+
     #endregion
     
     #region PhotonButtonFunctions
@@ -24,12 +39,13 @@ public class PhotonConnection : MonoBehaviourPunCallbacks
     public void ConnectToPhoton()
     {
         PhotonNetwork.ConnectUsingSettings();
-        PhotonNetwork.NickName = UIHandler.PlayerNameTxt;
+        PhotonNetwork.AutomaticallySyncScene = true;
+        PhotonNetwork.NickName = UIHandler.PlayerNameIFTxt;
     }
     
     public void CreateRoom()
     {
-        string roomName = UIHandler.CreateRoomNameTxt;
+        string roomName = UIHandler.CreateRoomNameIFTxt;
 
         if(IsTextEmpty(roomName))
         {
@@ -44,7 +60,7 @@ public class PhotonConnection : MonoBehaviourPunCallbacks
     
     public void JoinRoom()
     {
-        string joinRoomName = UIHandler.JoinRoomNameTxt;
+        string joinRoomName = UIHandler.JoinRoomNameIFTxt;
 
         if(IsTextEmpty(joinRoomName))
         {
@@ -53,13 +69,32 @@ public class PhotonConnection : MonoBehaviourPunCallbacks
         PhotonNetwork.JoinRoom(joinRoomName);
     }
 
+
+    public void DisconnectPhoton()
+    {
+        StartCoroutine(DisconnectPhotonRoutine());
+    }
+
+
+    public void OnClickLeaveRoom()
+    {
+        PhotonNetwork.LeaveRoom();
+        UIHandler.CreateRoomNameIFTxt = "";
+        UIHandler.JoinRoomNameIFTxt = "";
+    }
+
+    public void StartGame()
+    {
+        PhotonNetwork.LoadLevel("MultiplayerGameScene");
+    }
+
     #endregion
 
     #region InputFields_Event_Functions
 
     public void OnIFValueChange()
     {
-        if (UIHandler.PlayerNameTxt.Length > 2)
+        if (UIHandler.PlayerNameIFTxt.Length > 2)
         {
             UIHandler.PhotonConnectionButton.interactable = true;
         }
@@ -68,8 +103,87 @@ public class PhotonConnection : MonoBehaviourPunCallbacks
             UIHandler.PhotonConnectionButton.interactable = false;            
         }
     }
+
+    
     #endregion
 
+    #region Private_Functions
+
+    private IEnumerator OnDissconnectedRoutine()
+    {
+        if (connectedPanel.activeSelf)
+        {
+            connectedPanel.SetActive(false);
+        }
+
+        connectionFailPanel.SetActive(true);
+        UIHandler.PlayerNameIFTxt = "";
+        
+        yield return new WaitForSeconds(1f);
+        
+        connectionFailPanel.SetActive(false);
+    }
+
+
+    private IEnumerator DisconnectPhotonRoutine()
+    {
+        PhotonNetwork.Disconnect();
+        while (PhotonNetwork.IsConnected)
+        {
+           yield return null;
+        }
+        UIHandler.PlayerNameTMpro.text = "";
+    }
+
+
+
+    private void UpdatePlayerItemList()
+    {
+        foreach (PlayerItem item in _playerItems)
+        {
+            Destroy(item.gameObject);
+        }
+        _playerItems.Clear();
+
+        if (PhotonNetwork.CurrentRoom == null)
+        {
+            return;
+        }
+
+        foreach (KeyValuePair<int,Player> player in PhotonNetwork.CurrentRoom.Players)
+        {
+            PlayerItem newPlayerItem = Instantiate(playerItemPrefab, playerListingTransform);
+            newPlayerItem.SetPlayerName(player.Value);
+            _playerItems.Add(newPlayerItem);
+        }
+
+    }
+
+
+    private void CheckForStartGameButton()
+    {
+        if(PhotonNetwork.IsMasterClient && PhotonNetwork.CurrentRoom.PlayerCount >= 2)
+        {
+            UIHandler.StartGameButton.SetActive(true);
+        }
+        else if(!PhotonNetwork.IsMasterClient || PhotonNetwork.CurrentRoom.PlayerCount < 2)
+        {
+            UIHandler.StartGameButton.SetActive(false);            
+        }
+    }
+    
+
+    #endregion
+
+    #region Unity_Funtions
+
+    private void Update()
+    {
+       CheckForStartGameButton();
+    }
+
+    #endregion
+    
     #region PhotonCallbacks
     public override void OnConnectedToMaster()
     {
@@ -78,7 +192,7 @@ public class PhotonConnection : MonoBehaviourPunCallbacks
 
     public override void OnDisconnected(DisconnectCause cause)
     {
-        connectionFailPanel.SetActive(true);
+        StartCoroutine(OnDissconnectedRoutine());
     }
 
     public override void OnJoinedLobby()
@@ -94,13 +208,42 @@ public class PhotonConnection : MonoBehaviourPunCallbacks
 
     public override void OnJoinedRoom()
     {
-        PhotonNetwork.LoadLevel(2);
+        connectedPanel.SetActive(false);
+        inRoomPanel.SetActive(true);
+        UIHandler.RoomName = PhotonNetwork.CurrentRoom.Name;
+        UpdatePlayerItemList();
+    }
+
+    public override void OnLeftRoom()
+    {
+        UIHandler.RoomName = "";
+        connectedPanel.SetActive(true);
+        inRoomPanel.SetActive(false);
     }
 
     public override void OnJoinRandomFailed(short returnCode, string message)
     {
         Debug.Log("Failed To Join Room Error : "+message);
+    }
 
+    public override void OnPlayerEnteredRoom(Player newPlayer)
+    {
+       UpdatePlayerItemList();
+       
+       // if (PhotonNetwork.IsMasterClient && PhotonNetwork.CurrentRoom.PlayerCount >= 2)
+       // {
+       //     UIHandler.StartGameButton.SetActive(true);
+       // }
+    }
+
+    public override void OnPlayerLeftRoom(Player otherPlayer)
+    {
+        UpdatePlayerItemList();      
+        
+        // if (PhotonNetwork.IsMasterClient && PhotonNetwork.CurrentRoom.PlayerCount < 2)
+        // {
+        //     UIHandler.StartGameButton.SetActive(false);
+        // }
     }
 
     #endregion
