@@ -229,21 +229,11 @@ public class PhotonConnection : MonoBehaviourPunCallbacks
     public override void OnPlayerEnteredRoom(Player newPlayer)
     {
        UpdatePlayerItemList();
-       
-       // if (PhotonNetwork.IsMasterClient && PhotonNetwork.CurrentRoom.PlayerCount >= 2)
-       // {
-       //     UIHandler.StartGameButton.SetActive(true);
-       // }
     }
 
     public override void OnPlayerLeftRoom(Player otherPlayer)
     {
         UpdatePlayerItemList();      
-        
-        // if (PhotonNetwork.IsMasterClient && PhotonNetwork.CurrentRoom.PlayerCount < 2)
-        // {
-        //     UIHandler.StartGameButton.SetActive(false);
-        // }
     }
 
     #endregion
