@@ -12,10 +12,12 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MultiPlayer/Game Manager/MultiplayerGameplayManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MultiPlayer/Game Scene/GamePlayUI Handler/GamePlayUIHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MultiPlayer/Game Scene/Mutiplayer Ninja/Interfaces/Itimer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MultiPlayer/Game Scene/Mutiplayer Ninja/Player Abilities/MultiplayerJump.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MultiPlayer/Game Scene/Mutiplayer Ninja/Player Abilities/MultiplayerShoot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MultiPlayer/Game Scene/Mutiplayer Ninja/Player Abilities/MultiplayerTimer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MultiPlayer/Game Scene/Mutiplayer Ninja/Scriptable Object/MultiplayerNinjaScpObj.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MultiPlayer/GameWinner Detector/GameWinnerDetector.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MultiPlayer/PhotonConnection/PhotonConnection.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MultiPlayer/UI Handler/UIHandler.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -95,7 +97,8 @@
       <workItem from="1658385830245" duration="29164000" />
       <workItem from="1658475794845" duration="14948000" />
       <workItem from="1658644885304" duration="145000" />
-      <workItem from="1658645094205" duration="1774000" />
+      <workItem from="1658645094205" duration="25987000" />
+      <workItem from="1658690210912" duration="1936000" />
     </task>
     <servers />
   </component>

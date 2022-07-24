@@ -10,6 +10,7 @@ TagManager:
   - Platform
   - Spikes
   - LowerBoundary
+  - WinnerDetector
   layers:
   - Default
   - TransparentFX
@@ -30,7 +31,7 @@ TagManager:
   - Far BG
   - 'Mid BG '
   - Near BG
-  - 
+  - WinnerDetector
   - 
   - 
   - 
