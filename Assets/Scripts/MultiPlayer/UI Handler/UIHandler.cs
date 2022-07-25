@@ -18,9 +18,12 @@ public class UIHandler : MonoBehaviour
    
    [SerializeField] private TextMeshProUGUI connectedPanelPlayerName ;
 
+   [SerializeField] private TextMeshProUGUI connectingTextMeshProUGUI;
+   
    [SerializeField] private TextMeshProUGUI roomName;
 
    [SerializeField] private GameObject startGameButton;
+   
    
    #endregion
    
@@ -80,6 +83,13 @@ public class UIHandler : MonoBehaviour
       }
    }
    
+   public TextMeshProUGUI ConnectingTextTMPro
+   {
+      get
+      {
+         return connectingTextMeshProUGUI;
+      }
+   }
    
    public string RoomName
    {
@@ -101,6 +111,7 @@ public class UIHandler : MonoBehaviour
          return startGameButton;
       }
    }
+   
    
    #endregion
 }

@@ -11,6 +11,9 @@ using WebSocketSharp;
 public class PhotonConnection : MonoBehaviourPunCallbacks
 {
     #region Serialized_Fields
+    
+    [SerializeField] private GameObject mainMenuPanel;
+    
     [SerializeField] private GameObject connectedPanel;
 
     [SerializeField] private GameObject connectionFailPanel;
@@ -38,6 +41,7 @@ public class PhotonConnection : MonoBehaviourPunCallbacks
     
     public void ConnectToPhoton()
     {
+        UIHandler.ConnectingTextTMPro.gameObject.SetActive(true);
         PhotonNetwork.ConnectUsingSettings();
         PhotonNetwork.AutomaticallySyncScene = true;
         PhotonNetwork.NickName = UIHandler.PlayerNameIFTxt;
@@ -115,12 +119,14 @@ public class PhotonConnection : MonoBehaviourPunCallbacks
         {
             connectedPanel.SetActive(false);
         }
+        
 
         connectionFailPanel.SetActive(true);
         UIHandler.PlayerNameIFTxt = "";
         
         yield return new WaitForSeconds(1f);
         
+        mainMenuPanel.SetActive(true);
         connectionFailPanel.SetActive(false);
     }
 
@@ -202,12 +208,15 @@ public class PhotonConnection : MonoBehaviourPunCallbacks
             connectionFailPanel.SetActive(false);
         }
 
+        mainMenuPanel.SetActive(false);
+        UIHandler.ConnectingTextTMPro.gameObject.SetActive(false);
         UIHandler.PlayerNameTMpro.text = PhotonNetwork.NickName;
         connectedPanel.SetActive(true);
     }
 
     public override void OnJoinedRoom()
     {
+        
         connectedPanel.SetActive(false);
         inRoomPanel.SetActive(true);
         UIHandler.RoomName = PhotonNetwork.CurrentRoom.Name;
