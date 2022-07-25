@@ -178,7 +178,7 @@ public class MultiplayerNinja : MonoBehaviour
 
     private IEnumerator GameOverCoroutine()
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(4.5f);
         
         GamePlayUIHandler.Instance.DeactivateGameOver();
         GamePlayUIHandler.Instance.OnClickExitRoom();
