@@ -5,15 +5,18 @@
 # Features
 1.Smooth Player Movement
 
-2.Gliding and Sliding Ability.
+2.Multiplayer 
 
-3.Sharp Shooting Mechanism.
+3.Gliding and Sliding Ability.
 
-4.Different Traps.
+4.Sharp Shooting Mechanism.
 
-5.Beautiful Level Design.
+5.Different Traps.
 
-6.Unique Wall Climbing Technique.
+6.Beautiful Level Design.
+
+7.Unique Wall Climbing Technique.
+
 
 ##
 
