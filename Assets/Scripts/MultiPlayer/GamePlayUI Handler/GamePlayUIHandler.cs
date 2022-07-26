@@ -19,23 +19,12 @@ public class GamePlayUIHandler : MonoBehaviour
 
     [SerializeField] private GameObject pauseButton;
 
-    [SerializeField] private TextMeshProUGUI timerTextMeshProUGUI;
-
     [SerializeField] private GameObject gameOverPanel;
 
     [SerializeField] private TextMeshProUGUI winnerTextMeshProUGUI;
 
     #endregion
-
-    #region Getters_And_Setters
-
-    public TextMeshProUGUI TimerTextMeshPro
-    {
-        get { return timerTextMeshProUGUI; }
-    }
-
-    #endregion
-
+    
     #region Initializers
 
     private void MakeStaticInstance()

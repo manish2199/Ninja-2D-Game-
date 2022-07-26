@@ -24,6 +24,8 @@ public class MultiplayerGameplayManager : MonoBehaviourPunCallbacks
 
     #region Private_Field
 
+    private IEnumerator SpawnPlayerCoroutine;
+    
     private List<MultiplayerNinja> _players;
 
     #endregion
@@ -41,6 +43,11 @@ public class MultiplayerGameplayManager : MonoBehaviourPunCallbacks
             Instance = this;
         }
     }
+
+    private void InitializeSpawnPlayerCoroutine()
+    {
+        SpawnPlayerCoroutine = SpawnPlayer();
+    }
     
     #endregion
     
@@ -51,11 +58,13 @@ public class MultiplayerGameplayManager : MonoBehaviourPunCallbacks
         InitializePlayerList();
         
         InitializeInstance();
+        
+        InitializeSpawnPlayerCoroutine();
     }
 
     void Start()
     {
-        SpawnPlayer();
+       StartCoroutine(SpawnPlayerCoroutine);
     }
     #endregion
 
@@ -71,8 +80,10 @@ public class MultiplayerGameplayManager : MonoBehaviourPunCallbacks
     #endregion
     
     #region Private_Functions
-    private void SpawnPlayer()
-    { 
+    private IEnumerator SpawnPlayer()
+    {
+        yield return new WaitForSeconds(1.5f);
+        
         Vector2 randomPos = new Vector2(Random.Range(leftXPos, rightPos), -2.47f);
        GameObject gameObject = PhotonNetwork.Instantiate(playerPrefab.name, randomPos, playerPrefab.transform.rotation);
        _players.Add(gameObject.GetComponent<MultiplayerNinja>());

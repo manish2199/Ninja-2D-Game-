@@ -19,12 +19,6 @@ public class MultiplayerNinja : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI playerNameText; 
     #endregion
-
-    #region Public_Fields
-
-    [HideInInspector] public ITimer _playerTimerHandler;
-
-    #endregion
     
     #region Getters
 
@@ -85,13 +79,7 @@ public class MultiplayerNinja : MonoBehaviour
         }
     }
 
-    private void InitializeTimerVariables()
-    { 
-       _playerTimerHandler = GetComponent<ITimer>();
-       _playerTimerHandler.InitializeTimer(GamePlayUIHandler.Instance.TimerTextMeshPro,photonView);
-       _playerTimerHandler.StartTimer();
-    }
-
+     
     private void InitializeGameOverRoutine()
     {
         _gameOverRoutine = GameOverCoroutine();
@@ -119,9 +107,7 @@ public class MultiplayerNinja : MonoBehaviour
          InitializeMovemenVariables();
          
          InitializeShootVariables();
-         
-         InitializeTimerVariables();
-         
+                  
          InitializeGameOverRoutine();
     }
 
@@ -161,7 +147,6 @@ public class MultiplayerNinja : MonoBehaviour
         {
             _playerShootHandler.HandlePlayerShoot(_playerMovementHandler.IsFacingLeft);
         }
-         _playerTimerHandler.TimerFunction(); 
     }
     #endregion
 
@@ -169,7 +154,6 @@ public class MultiplayerNinja : MonoBehaviour
 
     private void FreezePlayer()
     {
-        _playerTimerHandler.StopTimer();
         _canJump = false;
         _canMove = false;
         _canShoot = false;
