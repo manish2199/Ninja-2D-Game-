@@ -23,9 +23,24 @@
 ##
 
 # Gameplay Video
-YouTube Link - https://youtu.be/ymuNTpmQz-w
+
+SinglePlayer Gameplay YouTube Link - https://youtu.be/ymuNTpmQz-w
+MultiPlayer Gameplay  Youtube Link - https://youtu.be/Z7sD1U0EnBM
 
 # GamePlay Screenshots
+
+Multiplayer 
+
+![Mul1](https://user-images.githubusercontent.com/93328047/181032733-e0fe5a85-93d2-4a9d-9785-ef10aa9f6fc7.png)
+![Mul2 ](https://user-images.githubusercontent.com/93328047/181032832-8c1a8f29-da9f-4d2b-a78a-6c78d4284c40.png)
+![Mul3](https://user-images.githubusercontent.com/93328047/181032913-16a3095b-13b1-41fc-9c96-92b9d42fe103.png)
+![Mul4](https://user-images.githubusercontent.com/93328047/181032956-f9aa638a-7cd4-4ab0-ab39-d7ce29aa0ab9.png)
+![Mul5 ](https://user-images.githubusercontent.com/93328047/181032994-2a2c10e3-8b0e-43d7-9806-591931a5b4de.png)
+![Mul5](https://user-images.githubusercontent.com/93328047/181033033-6877f8f1-5bdb-4b47-8367-ba845ee2bf14.png)
+
+
+
+Singleplayer
 
 <img width="953" alt="ninj1" src="https://user-images.githubusercontent.com/93328047/163780099-b879d012-4048-49ff-899d-51be5253526d.png">
 <img width="930" alt="ninj8" src="https://user-images.githubusercontent.com/93328047/163780120-6cea16e7-dca6-48ee-b1dc-76b472e54127.png">
