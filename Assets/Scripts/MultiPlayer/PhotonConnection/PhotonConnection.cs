@@ -24,7 +24,7 @@ public class PhotonConnection : MonoBehaviourPunCallbacks
 
     [SerializeField] private PlayerItem playerItemPrefab;
 
-    [SerializeField] private UIHandler UIHandler;
+    [SerializeField] private MainMenuUIHandler UIHandler;
     #endregion
     
     #region Private_Fields
@@ -41,7 +41,8 @@ public class PhotonConnection : MonoBehaviourPunCallbacks
     
     public void ConnectToPhoton()
     {
-        UIHandler.ConnectingTextTMPro.gameObject.SetActive(true);
+        UIHandler.EnableConnectingText();
+  
         PhotonNetwork.ConnectUsingSettings();
         PhotonNetwork.AutomaticallySyncScene = true;
         PhotonNetwork.NickName = UIHandler.PlayerNameIFTxt;
@@ -83,8 +84,8 @@ public class PhotonConnection : MonoBehaviourPunCallbacks
     public void OnClickLeaveRoom()
     {
         PhotonNetwork.LeaveRoom();
-        UIHandler.CreateRoomNameIFTxt = "";
-        UIHandler.JoinRoomNameIFTxt = "";
+
+        UIHandler.HandleOnClickLeaveRoom();
     }
 
     public void StartGame()
@@ -98,14 +99,7 @@ public class PhotonConnection : MonoBehaviourPunCallbacks
 
     public void OnIFValueChange()
     {
-        if (UIHandler.PlayerNameIFTxt.Length > 2)
-        {
-            UIHandler.PhotonConnectionButton.interactable = true;
-        }
-        else
-        {
-            UIHandler.PhotonConnectionButton.interactable = false;            
-        }
+        UIHandler.ConnectionButtonInteraction();
     }
 
     
@@ -122,7 +116,7 @@ public class PhotonConnection : MonoBehaviourPunCallbacks
         
 
         connectionFailPanel.SetActive(true);
-        UIHandler.PlayerNameIFTxt = "";
+        UIHandler.ResetPlayerNameIF();
         
         yield return new WaitForSeconds(1f);
         
@@ -138,7 +132,7 @@ public class PhotonConnection : MonoBehaviourPunCallbacks
         {
            yield return null;
         }
-        UIHandler.PlayerNameTMpro.text = "";
+       UIHandler.ResetPlayerNameTMPro();
     }
 
 
@@ -170,11 +164,11 @@ public class PhotonConnection : MonoBehaviourPunCallbacks
     {
         if(PhotonNetwork.IsMasterClient && PhotonNetwork.CurrentRoom.PlayerCount >= 2)
         {
-            UIHandler.StartGameButton.SetActive(true);
+            UIHandler.HandleStartButton(true);
         }
         else if(!PhotonNetwork.IsMasterClient || PhotonNetwork.CurrentRoom.PlayerCount < 2)
         {
-            UIHandler.StartGameButton.SetActive(false);            
+            UIHandler.HandleStartButton(false);
         }
     }
     
@@ -209,8 +203,7 @@ public class PhotonConnection : MonoBehaviourPunCallbacks
         }
 
         mainMenuPanel.SetActive(false);
-        UIHandler.ConnectingTextTMPro.gameObject.SetActive(false);
-        UIHandler.PlayerNameTMpro.text = PhotonNetwork.NickName;
+        UIHandler.HandleOnJoinLobby(PhotonNetwork.NickName);
         connectedPanel.SetActive(true);
     }
 
@@ -219,13 +212,13 @@ public class PhotonConnection : MonoBehaviourPunCallbacks
         
         connectedPanel.SetActive(false);
         inRoomPanel.SetActive(true);
-        UIHandler.RoomName = PhotonNetwork.CurrentRoom.Name;
+        UIHandler.HandleRoomName(PhotonNetwork.CurrentRoom.Name);
         UpdatePlayerItemList();
     }
 
     public override void OnLeftRoom()
     {
-        UIHandler.RoomName = "";
+        UIHandler.ResetRoomName();
         connectedPanel.SetActive(true);
         inRoomPanel.SetActive(false);
     }

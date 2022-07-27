@@ -322,7 +322,7 @@ MonoBehaviour:
   connectToPhotonButton: {fileID: 1988734212}
   connectedPanelPlayerName: {fileID: 643169664}
   connectingTextMeshProUGUI: {fileID: 922599591}
-  roomName: {fileID: 214805651}
+  roomNameTextMeshProUGUI: {fileID: 214805651}
   startGameButton: {fileID: 341985527}
 --- !u!1 &133683291
 GameObject:

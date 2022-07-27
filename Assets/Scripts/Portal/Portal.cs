@@ -7,8 +7,7 @@ public class Portal : MonoBehaviour
     private Rigidbody2D enteredRigidbody;
     private float enterVelocity, exitVelocity;
 
-
-
+    
     void OnTriggerEnter2D( Collider2D target)
     {
         enteredRigidbody = target.gameObject.GetComponent<Rigidbody2D>();

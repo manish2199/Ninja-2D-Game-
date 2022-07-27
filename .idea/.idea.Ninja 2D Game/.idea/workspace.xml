@@ -17,7 +17,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MultiPlayer/Game Scene/Mutiplayer Ninja/Scriptable Object/MultiplayerNinjaScpObj.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MultiPlayer/GameWinner Detector/GameWinnerDetector.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MultiPlayer/PhotonConnection/PhotonConnection.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MultiPlayer/UI Handler/UIHandler.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -98,7 +97,9 @@
       <workItem from="1658645094205" duration="25987000" />
       <workItem from="1658690210912" duration="2531000" />
       <workItem from="1658766033061" duration="2394000" />
-      <workItem from="1658821302152" duration="1467000" />
+      <workItem from="1658821302152" duration="2046000" />
+      <workItem from="1658908109715" duration="1035000" />
+      <workItem from="1658941811212" duration="2879000" />
     </task>
     <servers />
   </component>

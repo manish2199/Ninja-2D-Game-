@@ -18,14 +18,7 @@ public class GamePlayController : MonoBehaviour
         makeInstance();
     }
 
-    void Update()
-    {
-        // if(playerStats.Lives <=0)
-        // {
-        //   StartCoroutine(ninjaDead());
-        // }
-    }
-
+    
     void makeInstance()
     {
         if(instance == null)
@@ -38,7 +31,6 @@ public class GamePlayController : MonoBehaviour
     {
         for(int i=checkPoints.Length - 1; i >= 0; i--)
         {
-            // print(checkPoints[i].transform.localPosition.x);
             if(checkPoints[i].transform.position.x <= playerGameObject.transform.position.x )
             {
                 Vector3 temp = checkPoints[i].transform.position;
